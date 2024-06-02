@@ -42,11 +42,13 @@ body{
     margin-top: 50px;
     margin-bottom: 75px;
     line-height: 30px;
+    text-transform: none;
 }
 .hero-btn{
     background-color: #FF3147;
     letter-spacing: 1.4px;
     padding: 15px 20px;
+    font-weight: 600;
     font-weight: 14px;
     border: none;
     border-radius: 2px;
@@ -54,9 +56,12 @@ body{
 }
 .services-section{
     background-color: #FAFAFA;
+    width: 100%;
+}
+.services-content{
     padding-top: 100px;
     padding-bottom: 100px;
-    padding-left: 373px;
+    margin-left: 373px;
 }
 .sevices-text{
     display: flex;
@@ -64,13 +69,13 @@ body{
     margin-top: 40px;
     margin-bottom: 60px;
 }
-.services-section h3{
+.section-subtitle{
     font-size: 24px;
     font-weight: 600;
     color: #FF3147;
     text-transform: uppercase;   
 }
-.services-section h1{
+.section-title{
     font-size: 45px;
     font-weight: 700;
     line-height: 60px;
@@ -86,7 +91,9 @@ body{
     width: 584px;
     line-height: 30px;
 }
-
+.services-card{
+    margin-bottom: 100px;
+}
 .services-card-box {
     width: 342px;
     height: 400px;
@@ -184,4 +191,84 @@ body{
     background-color: #FF3147;
     opacity: 0.5;
 
+}
+.choose-container{
+    background-color: #FFFFFF;
+}
+.choose-content{
+    margin: 100px 375px;
+}
+.choose-section-subtitle{
+    text-align: center;
+}
+
+.choose-section-title{
+    margin-top: 40px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+/* why choose us */
+.choose-cards{
+    display: flex;
+    justify-content: space-around;
+}
+.choose-card{
+    width: 260px;
+    height: 210px;
+    /* text-transform: none; */
+    /* padding: 0px 20px; */
+}
+.choose-card .card-image{
+    width: 60px;
+    height: 60px;
+}
+.choose-card .card-title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+/* Our Project section */
+.project-container{
+    width: 100%;
+}
+.project-content{
+    margin-left: 375px;
+    margin-right: 375px;
+}
+.project-items{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.project-list{
+  width: 370px;
+  height: 100%;
+  
+}
+.project{
+    background: #F6F6F6;
+    padding: 0px 30px ;
+    height: 160px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid rgb(199, 197, 197);
+}
+.project-image{
+    width: 770px;
+    height: 567px;
+    overflow: hidden;
+}
+.project-title{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.project-description{
+    font-size: 16px;
+    line-height: 28px;
 }
