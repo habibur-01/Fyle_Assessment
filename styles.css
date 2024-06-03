@@ -298,6 +298,7 @@ body{
     box-shadow: 3px 6px 20px #672C2C1F;
     gap: 30px;
     border-radius: 6px;
+    margin-top: 5px;
 }
 .experts-card-img{
     width: 40px;
@@ -313,6 +314,7 @@ body{
 .experts-description{
     font-size: 20px;
     margin-top: 10px;
+    font-weight: 300;
 }
 
 .experts-card-img>img{
@@ -320,4 +322,29 @@ body{
     height: 100%;
     object-fit: fill;
     overflow: hidden;
+}
+/* About us section */
+.aboutus-container{
+    background: #FFFFFF;
+    width: 100%;
+}
+.about-description{
+    width: 830px;
+    margin: auto;
+}
+
+/* footer section */
+.footer-section{
+    width: 100%;
+    height: 310px;
+    background: #FF3147;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-image{
+    width: 1100px;
+    height: 56px;
+    object-fit: cover;
+    object-position: center;
 }
