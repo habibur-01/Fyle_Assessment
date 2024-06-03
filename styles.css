@@ -216,7 +216,6 @@ body{
 .choose-card{
     width: 260px;
     height: 210px;
-    /* text-transform: none; */
     /* padding: 0px 20px; */
 }
 .choose-card .card-image{
@@ -245,13 +244,13 @@ body{
 }
 .project-list{
   width: 370px;
-  height: 100%;
+  height: 567px;
   
 }
 .project{
     background: #F6F6F6;
     padding: 0px 30px ;
-    height: 160px;
+    height: 33.33%;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -271,4 +270,54 @@ body{
 .project-description{
     font-size: 16px;
     line-height: 28px;
+}
+/* experts-container */
+.experts-container{
+    background: #FAFAFA;
+    width: 100%;
+    height: 600px;
+    margin: 100px 0px;
+}
+.experts-content{
+    padding: 100px 0px;
+    margin-left: 375px;
+    margin-right: 375px;
+}
+.experts-card-container{
+    display: flex;
+    justify-content: space-around;
+}
+.experts-card{
+    width: 270px;
+    height: 233px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 3px 6px 20px #672C2C1F;
+    gap: 30px;
+    border-radius: 6px;
+}
+.experts-card-img{
+    width: 40px;
+    height: 40px;
+}
+.experts-card-text{
+    text-align: center;
+    
+}
+.experts-card-title{
+    font-size: 60px;
+}
+.experts-description{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.experts-card-img>img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    overflow: hidden;
 }
