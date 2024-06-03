@@ -217,6 +217,12 @@ body{
     width: 260px;
     height: 210px;
     /* padding: 0px 20px; */
+    
+}
+hover{
+    transform: translateX(10px);
+    background: #f4f4f4;
+    padding: 14px;
 }
 .choose-card .card-image{
     width: 60px;
@@ -257,10 +263,20 @@ body{
     justify-content: center;
     border-bottom: 1px solid rgb(199, 197, 197);
 }
+.project-first{
+    background: #FF3147;
+    color: #FFFFFF;
+}
 .project-image{
     width: 770px;
     height: 567px;
+    object-fit: fill;
+    object-position: center;
     overflow: hidden;
+    display: block;
+}
+.image-hidden{
+    display: none;
 }
 .project-title{
     font-size: 20px;
@@ -299,6 +315,11 @@ body{
     gap: 30px;
     border-radius: 6px;
     margin-top: 5px;
+}
+.experts-card:hover{
+    transform: translate(10px,10px);
+    cursor: default;
+
 }
 .experts-card-img{
     width: 40px;
@@ -347,4 +368,97 @@ body{
     height: 56px;
     object-fit: cover;
     object-position: center;
+}
+.form-content{
+    width: 450px;
+    height: 360px;
+    padding: 30px;
+    background: #f3f0f0;
+    border-radius: 8px;
+    position: absolute;
+    box-shadow: 10px 10px 10px ;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.open-popup{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
+.close-popup{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.close-popup button{
+    padding: 5px;
+    font-weight: 600;
+    /* border: none; */
+    cursor: pointer;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid gainsboro;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: 500;
+    pointer-events: none;
+}
+
+.input-box input:focus~label{
+    top:  -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.agreements{
+    display: flex;
+    gap: 10px;
+   
+    
+}
+
+.agreements input{
+    margin-top: -22px;
+    accent-color: #FF3366;
+    font-size: 16px;
+}
+.agreements input p{
+
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+.agreements label{
+    width: 80%;
+    border: 2px solid black;
+}
+.agreements-btn{
+    background-color: #FF3366;
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: 600;
+    padding-top:16px;
+    padding-bottom: 16px;
+    border-radius: 4px;
+    margin-top: 30px;
 }

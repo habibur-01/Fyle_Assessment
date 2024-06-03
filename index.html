@@ -26,7 +26,48 @@
                             elit fringilla ac at purus, Morbi sed lacus nec
                             risus
                             finibus feugiat et fermentum</p>
-                        <button class="hero-btn">CONTACT US</button>
+                        <button class="hero-btn" onclick="openPopup()">CONTACT
+                            US</button>
+                        <div class="form-content" id="popup">
+                            <h1
+                                style="font-size: 20px; font-weight: 600; margin-bottom: 30px;">Talk
+                                to us</h1>
+                            <form class>
+                                <div class="input-box">
+
+                                    <input type="text">
+                                    <label style="color: gray;">Work
+                                        email</label>
+                                </div>
+                                <div style="display: flex; gap:24px;">
+                                    <div class="input-box">
+
+                                        <input type="text">
+                                        <label style="color: gray;">First
+                                            name</label>
+                                    </div>
+                                    <div class="input-box">
+
+                                        <input type="text">
+                                        <label style="color: gray;">Last
+                                            name</label>
+                                    </div>
+                                </div>
+                                <div class="agreements">
+                                    <input type="checkbox">
+                                    <p>I agree to Fyle's terms and conditions,
+                                        and provide
+                                        consent to send me communication.</p>
+                                </div>
+                                <div>
+                                    <button class="agreements-btn">Contact
+                                        Us</button>
+                                </div>
+                            </form>
+                            <div class="close-popup">
+                                <button onclick="closePopup()">Close</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -73,11 +114,13 @@
                                             risus finibus feugiat et fermentum
                                             nibh.
                                             Pellentesque</p>
-                                        <button class="card-btn">
-                                            <p>Read more</p>
-                                            <img src="./assets/arrow.png"
-                                                alt="arrow">
-                                        </button>
+                                        <a href="https://www.fylehq.com/"
+                                            target="_blank"><button
+                                                class="card-btn">
+                                                <p>Read more</p>
+                                                <img src="./assets/arrow.png"
+                                                    alt="arrow">
+                                            </button></a>
                                     </div>
 
                                 </div>
@@ -167,11 +210,16 @@
                     </div>
                     <div class="project-items">
                         <div>
+                            <img src="./assets/3.png" alt
+                                class="project-image image-hidden" id="image-1">
                             <img src="./assets/image@2x.png" alt
-                                class="project-image">
+                                class="project-image" id="image-2">
+                            <img src="./assets/2.png" alt
+                                class="project-image image-hidden" id="image-3">
                         </div>
                         <div class="project-list">
-                            <div class="project">
+                            <div class="project " id="firstproject"
+                                onClick="addBackgroundfirst(this)">
                                 <h1 class="project-title">Genderless Kei –
                                     Japan’s Hot</h1>
                                 <p class="project-description">
@@ -181,7 +229,9 @@
                                 </p>
 
                             </div>
-                            <div class="project">
+                            <div class="project project-first"
+                                id="secondproject"
+                                onClick="addBackgroundsecond(this)">
                                 <h1 class="project-title">Better Strategy &
                                     Quality</h1>
                                 <p class="project-description">
@@ -191,7 +241,8 @@
                                 </p>
 
                             </div>
-                            <div class="project">
+                            <div class="project" id="thirdproject"
+                                onClick="addBackgroundthird(this)">
                                 <h1 class="project-title">Genderless Kei –
                                     Japan’s Hot</h1>
                                 <p class="project-description">
@@ -303,12 +354,57 @@
 
         <footer>
             <div class="footer-section">
-                <img src="./assets/Group 500.png" alt="" class="footer-image">
+                <img src="./assets/Group 500.png" alt class="footer-image">
 
             </div>
         </footer>
 
         <!--  -->
+        <script> 
+        let popup = document.getElementById("popup")
+        let firstproject = document.getElementById("firstproject")
+        let secproject = document.getElementById("secondproject")
+        let thirdproject = document.getElementById("thirdproject")
+        let image1 = document.getElementById("image-1")
+        let image2 = document.getElementById("image-2")
+        let image3 = document.getElementById("image-3")
+        function openPopup(){
+            popup.classList.add("open-popup")
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup")
+        }
+        function addBackgroundfirst(element) {
+            
+            element.classList.add("project-first");
+            secproject.classList.remove("project-first");
+            thirdproject.classList.remove("project-first");
+            image2.classList.add("image-hidden")
+            image3.classList.add("image-hidden")
+            image1.classList.remove("image-hidden")
+            
+        }
+        function addBackgroundsecond(element) {
+            
+            element.classList.add("project-first");
+            firstproject.classList.remove("project-first");
+            thirdproject.classList.remove("project-first");
+            image2.classList.remove("image-hidden")
+            image1.classList.add("image-hidden")
+            image3.classList.add("image-hidden")
+
+        }
+        function addBackgroundthird(element) {
+            
+            element.classList.add("project-first");
+            secproject.classList.remove("project-first");
+            firstproject.classList.remove("project-first");
+            image3.classList.remove("image-hidden")
+            image1.classList.add("image-hidden")
+            image2.classList.add("image-hidden")
+
+        }
+        </script>
         <script src="./script.js"></script>
     </body>
 </html>
